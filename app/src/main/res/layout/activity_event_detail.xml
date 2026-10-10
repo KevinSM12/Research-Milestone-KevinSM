@@ -1,0 +1,50 @@
+<!--  Event detail screen -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/eventDetailScroll" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#FFFFFF" android:fillViewport="true" android:clipToPadding="false" tools:context=".EventDetailActivity">
+    <LinearLayout android:id="@+id/eventDetailContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingBottom="20dp">
+        <!--  Campus map / stadium hero. Replace this placeholder with an image later.  -->
+        <FrameLayout android:id="@+id/eventMapHeader" android:layout_width="match_parent" android:layout_height="210dp" android:background="#252A2D">
+            <TextView android:id="@+id/eventMapPlaceholder" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#303638" android:gravity="center" android:text="CAMPUS TRACK FIELD\n\n● ┄ ┄ ┄ ┄ ┄ ┄ ●" android:textColor="#E6E9E7" android:textSize="15sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/backButton" android:layout_width="40dp" android:layout_height="40dp" android:layout_gravity="top|start" android:layout_marginStart="14dp" android:layout_marginTop="14dp" android:background="#FFFFFF" android:gravity="center" android:text="‹" android:textColor="#202020" android:textSize="30sp" android:clickable="true" android:focusable="true" android:contentDescription="Go back"/>
+            <TextView android:id="@+id/intervalsBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|end" android:layout_marginTop="17dp" android:layout_marginEnd="14dp" android:background="#080808" android:paddingStart="12dp" android:paddingTop="6dp" android:paddingEnd="12dp" android:paddingBottom="6dp" android:text="INTERVALS" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+        </FrameLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="16dp" android:paddingTop="18dp" android:paddingEnd="16dp">
+            <TextView android:id="@+id/eventTypeLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OFFICIAL CAMPUS SPONSOR EVENT" android:textColor="#941526" android:textSize="11sp" android:textStyle="bold" android:letterSpacing="0.06"/>
+            <TextView android:id="@+id/eventTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Powerade Arena Sprints" android:textColor="#111111" android:textSize="24sp" android:textStyle="bold" tools:ignore="TextSizeCheck"/>
+            <TextView android:id="@+id/eventTimeLocation" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Today at 5:30 PM • Campus Track Field" android:textColor="#858585" android:textSize="12sp"/>
+            <!--  Three event stats  -->
+            <LinearLayout android:id="@+id/eventStatsCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="#F5F5F5" android:gravity="center_vertical" android:orientation="horizontal" android:paddingStart="12dp" android:paddingTop="14dp" android:paddingEnd="12dp" android:paddingBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DISTANCE" android:textColor="#969696" android:textSize="9sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/eventDistance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="1.20 mi" android:textColor="#171717" android:textSize="15sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EST. REWARD" android:textColor="#969696" android:textSize="9sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/eventReward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="+150 XP" android:textColor="#941526" android:textSize="15sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ATTENDING" android:textColor="#969696" android:textSize="9sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/eventAttending" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="84 Runners" android:textColor="#171717" android:textSize="15sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--  Sponsor promo card  -->
+            <LinearLayout android:id="@+id/sponsorPromoCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="#FFF9F0" android:orientation="vertical" android:padding="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="30dp" android:layout_height="30dp" android:background="#101010" android:gravity="center" android:text="ϟ" android:textColor="#FFFFFF" android:textSize="23sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/sponsorName" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:text="Powerade Hydration" android:textColor="#171717" android:textSize="12sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#F2B65D" android:paddingStart="6dp" android:paddingTop="4dp" android:paddingEnd="6dp" android:paddingBottom="4dp" android:text="SPONSOR PROMO" android:textColor="#171717" android:textSize="8sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <TextView android:id="@+id/sponsorDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Fuel your sprint with zero sugar. Claim your free Powerade at the hydration zone near the track finish line after logging your workout." android:textColor="#555555" android:textSize="12sp" android:lineSpacingExtra="2dp"/>
+            </LinearLayout>
+            <!--  Description  -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:text="EVENT DESCRIPTION" android:textColor="#969696" android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.08"/>
+            <TextView android:id="@+id/eventDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Join the official campus hydration challenge! Prepare for high-intensity interval training designed to test your pace limits and maximize stamina. Bring your student ID card to register details at the field gate." android:textColor="#555555" android:textSize="13sp" android:lineSpacingExtra="3dp"/>
+            <!--  Main RSVP action  -->
+            <Button android:id="@+id/rsvpButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="22dp" android:backgroundTint="#850018" android:text="＋ RSVP to Event" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+            <!--  Secondary actions  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+                <Button android:id="@+id/shareEventButton" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="6dp" android:backgroundTint="#FFFFFF" android:text="⇧ Share Event" android:textAllCaps="false" android:textColor="#222222" android:textSize="12sp"/>
+                <Button android:id="@+id/cancelRsvpButton" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginStart="6dp" android:backgroundTint="#FCE7E7" android:text="▢ Cancel RSVP" android:textAllCaps="false" android:textColor="#8B0018" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

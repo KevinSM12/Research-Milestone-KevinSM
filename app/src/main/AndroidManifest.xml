@@ -15,6 +15,7 @@
         <activity android:name=".SponsorOnboardingActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".CreateEventActivity" />
+        <activity android:name=".EventDetailActivity" />
 
         <activity
             android:name=".LoginActivity"

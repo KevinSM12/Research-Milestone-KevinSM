@@ -43,14 +43,14 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
 
         cardAthlete.setOnClickListener(v -> {
-            isSponsorSelected = false;
+            isSponsorSelected = true;
             cardAthlete.setBackgroundResource(R.drawable.bg_card_selected);
             cardSponsor.setBackgroundResource(R.drawable.bg_card_unselected);
             Toast.makeText(this, "Athlete onboarding is planned for the team PoC release", Toast.LENGTH_SHORT).show();
         });
 
         cardSponsor.setOnClickListener(v -> {
-            isSponsorSelected = true;
+            isSponsorSelected = false;
             cardSponsor.setBackgroundResource(R.drawable.bg_card_selected);
             cardAthlete.setBackgroundResource(R.drawable.bg_card_unselected);
         });
@@ -85,11 +85,11 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (!isSponsorSelected) {
-            Toast.makeText(this, "Please select 'Join as Sponsor' for this prototype slice", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select 'Join as Athlete' for this prototype slice", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        Intent intent = new Intent(LoginActivity.this, SponsorOnboardingActivity.class);
+        Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
         startActivity(intent);
         finish();
     }
