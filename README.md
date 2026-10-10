@@ -1,11 +1,5 @@
 # Research-Milestone-KevinSM — Android app foundation
 
-This Android project foundation is adapted from the reference project:
-https://github.com/JosueAR-CS/Research-Milestone-JosueAR
-
-The reference repository has not been modified. This repository is maintained separately.
-Please retain this attribution and check with the original author regarding any license or reuse requirements before redistributing the original app-specific assets or feature code.
-
 ## Open in Android Studio
 
 1. Extract this ZIP.
