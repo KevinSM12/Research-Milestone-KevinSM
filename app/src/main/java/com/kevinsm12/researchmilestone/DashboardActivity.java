@@ -115,18 +115,16 @@ public class DashboardActivity extends AppCompatActivity {
         // Bottom Navigation actions
         View navDiscover = findViewById(R.id.navDiscover);
         if (navDiscover != null) {
-            navDiscover.setOnClickListener(v -> {
-                Intent intent = new Intent(DashboardActivity.this, AnalyticsActivity.class);
-                startActivity(intent);
-            });
+            navDiscover.setOnClickListener(v ->
+                Toast.makeText(this, "📡 Discover page planned for team PoC release.", Toast.LENGTH_SHORT).show()
+            );
         }
 
         View navProfile = findViewById(R.id.navProfile);
         if (navProfile != null) {
-            navProfile.setOnClickListener(v -> {
-                Intent intent = new Intent(DashboardActivity.this, SponsorOnboardingActivity.class);
-                startActivity(intent);
-            });
+            navProfile.setOnClickListener(v ->
+                Toast.makeText(this, "📡 Profile page planned for team PoC release.", Toast.LENGTH_SHORT).show()
+            );
         }
     }
 

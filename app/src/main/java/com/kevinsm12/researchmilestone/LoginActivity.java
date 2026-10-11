@@ -46,13 +46,13 @@ public class LoginActivity extends AppCompatActivity {
             isSponsorSelected = true;
             cardAthlete.setBackgroundResource(R.drawable.bg_card_selected);
             cardSponsor.setBackgroundResource(R.drawable.bg_card_unselected);
-            Toast.makeText(this, "Athlete onboarding is planned for the team PoC release", Toast.LENGTH_SHORT).show();
         });
 
         cardSponsor.setOnClickListener(v -> {
             isSponsorSelected = false;
             cardSponsor.setBackgroundResource(R.drawable.bg_card_selected);
             cardAthlete.setBackgroundResource(R.drawable.bg_card_unselected);
+            Toast.makeText(this, "Sponsor onboarding is planned for the team PoC release", Toast.LENGTH_SHORT).show();
         });
 
         findViewById(R.id.btnGoogle).setOnClickListener(v ->
